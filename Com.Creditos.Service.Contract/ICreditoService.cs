@@ -23,6 +23,14 @@ namespace Com.Creditos.Service.Contract
         IEnumerable<Credito> GetCreditos();
 
         [OperationContract]
+        [WebGet(
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "/GetCredito/{id}",
+            BodyStyle = WebMessageBodyStyle.Bare)]
+        Credito GetCredito(string id);
+
+        [OperationContract]
         [WebInvoke(
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
@@ -47,6 +55,6 @@ namespace Com.Creditos.Service.Contract
             Method = "DELETE",
             UriTemplate = "/DeleteCredito/{id}",
             BodyStyle = WebMessageBodyStyle.Bare)]
-        bool Delete(int id);
+        bool Delete(string id);
     }
 }

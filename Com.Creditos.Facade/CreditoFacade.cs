@@ -23,6 +23,11 @@ namespace Com.Creditos.Facade
             return _creditoRepository.GetAll();
         }
 
+        public Credito GetCredito(int id)
+        {
+            return _creditoRepository.GetById(id);
+        }
+
         public Credito Save(Credito credito)
         {
             return _creditoRepository.Add(credito);

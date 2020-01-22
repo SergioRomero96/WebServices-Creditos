@@ -11,11 +11,21 @@ namespace Com.Creditos.Service
 {
     public class CreditoService : ICreditoService
     {
-        public bool Delete(int id)
+        public bool Delete(string id)
         {
             using (var creditoFacade = new CreditoFacade())
             {
-                return creditoFacade.Delete(id);
+                int idCredito = Int32.Parse(id);
+                return creditoFacade.Delete(idCredito);
+            }
+        }
+
+        public Credito GetCredito(string id)
+        {
+            using (var creditoFacade = new CreditoFacade())
+            {
+                int idCredito = Convert.ToInt32(id);
+                return creditoFacade.GetCredito(idCredito);
             }
         }
 

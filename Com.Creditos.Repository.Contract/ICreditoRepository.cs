@@ -10,6 +10,7 @@ namespace Com.Creditos.Repository.Contract
     public interface ICreditoRepository
     {
         IEnumerable<Credito> GetAll();
+        Credito GetById(int id);
         Credito Add(Credito credito);
         Credito Update(Credito credito);
         bool Delete(int id);

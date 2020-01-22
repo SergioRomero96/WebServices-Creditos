@@ -79,5 +79,18 @@ namespace Com.Creditos.Repository
                 return result > 0 ? credito : new Credito();
             }
         }
+
+        public Credito GetById(int id)
+        {
+            using (IDbConnection connection = new SqlConnection(ConnectionRepository.GetConnectionString()))
+            {
+                connection.Open();
+                var parameters = new DynamicParameters();
+                parameters.Add("IdCredito", id);
+
+                var credito = connection.QuerySingle<Credito>("sp_credito_obtener", param: parameters, commandType: CommandType.StoredProcedure);
+                return credito;
+            }
+        }
     }
 }
