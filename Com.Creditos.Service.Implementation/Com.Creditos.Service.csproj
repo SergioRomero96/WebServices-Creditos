@@ -7,8 +7,8 @@
     <ProjectGuid>{A5F78679-991B-43A7-B05A-F9A77E35EC67}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Com.Creditos.Service.Implementation</RootNamespace>
-    <AssemblyName>Com.Creditos.Service.Implementation</AssemblyName>
+    <RootNamespace>Com.Creditos.Service</RootNamespace>
+    <AssemblyName>Com.Creditos.Service</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteService.cs" />
+    <Compile Include="CreditoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

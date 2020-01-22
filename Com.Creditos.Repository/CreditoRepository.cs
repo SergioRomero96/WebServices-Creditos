@@ -37,7 +37,7 @@ namespace Com.Creditos.Repository
             }
         }
 
-        public Credito Save(Credito credito)
+        public Credito Add(Credito credito)
         {
             using (IDbConnection connection = new SqlConnection(ConnectionRepository.GetConnectionString()))
             {
